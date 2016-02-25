@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp clean dist"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Aldrin Leal <aldrin@leal.eng.br>",
+  "private": true,
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.1",
