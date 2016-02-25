@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>test</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.min.css"/>
+
+    <!--
+    <link rel="stylesheet" href="style.css"/>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script type="text/javascript" src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="container">
+    <textarea id="text" rows="15" cols="80">
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ lambada-maven-plugin ---
+[INFO] io.ingenieux.lambada:lambada-maven-plugin:maven-plugin:0.0.2-SNAPSHOT
+[INFO] +- com.amazonaws:aws-lambda-java-core:jar:1.1.0:compile
+[INFO] +- com.fasterxml.jackson.core:jackson-databind:jar:2.6.4:compile
+[INFO] |  \- com.fasterxml.jackson.core:jackson-core:jar:2.6.4:compile
+[INFO] +- com.fasterxml.jackson.core:jackson-annotations:jar:2.6.4:compile
+[INFO] +- io.ingenieux.lambada:lambada-invoker:jar:0.0.2-SNAPSHOT:compile
+[INFO] +- io.ingenieux.lambada:lambada-runtime:jar:0.0.2-SNAPSHOT:compile
+[INFO] +- io.ingenieux.lambada:lambada-testing:jar:0.0.2-SNAPSHOT:compile
+[INFO] +- org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.4:provided
+[INFO] |  \- org.apache.maven:maven-artifact:jar:3.0:compile
+[INFO] +- org.apache.maven:maven-core:jar:3.3.3:compile
+[INFO] |  +- org.apache.maven:maven-model:jar:3.3.3:compile
+[INFO] |  +- org.apache.maven:maven-settings:jar:3.3.3:compile
+[INFO] |  +- org.apache.maven:maven-settings-builder:jar:3.3.3:compile
+[INFO] |  |  \- org.apache.maven:maven-builder-support:jar:3.3.3:compile
+[INFO] |  +- org.apache.maven:maven-repository-metadata:jar:3.3.3:compile
+[INFO] |  +- org.apache.maven:maven-model-builder:jar:3.3.3:compile
+[INFO] |  +- org.apache.maven:maven-aether-provider:jar:3.3.3:compile
+[INFO] |  |  \- org.eclipse.aether:aether-spi:jar:1.0.2.v20150114:compile
+[INFO] |  +- org.eclipse.aether:aether-impl:jar:1.0.2.v20150114:compile
+[INFO] |  +- org.eclipse.aether:aether-api:jar:1.0.2.v20150114:compile
+[INFO] |  +- org.eclipse.aether:aether-util:jar:1.0.2.v20150114:compile
+[INFO] |  +- org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.0:compile
+[INFO] |  |  +- javax.enterprise:cdi-api:jar:1.0:compile
+[INFO] |  |  |  \- javax.annotation:jsr250-api:jar:1.0:compile
+[INFO] |  |  \- org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.3.0:compile
+[INFO] |  +- org.sonatype.sisu:sisu-guice:jar:no_aop:3.2.5:compile
+[INFO] |  |  +- javax.inject:javax.inject:jar:1:compile
+[INFO] |  |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  +- org.codehaus.plexus:plexus-interpolation:jar:1.21:compile
+[INFO] |  +- org.codehaus.plexus:plexus-utils:jar:3.0.22:compile
+[INFO] |  +- org.codehaus.plexus:plexus-classworlds:jar:2.5.2:compile
+[INFO] |  +- org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[INFO] |  \- org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[INFO] |     \- org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[INFO] +- org.apache.maven:maven-plugin-api:jar:3.3.3:compile
+[INFO] +- org.reflections:reflections:jar:0.9.10:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- org.javassist:javassist:jar:3.19.0-GA:compile
+[INFO] |  \- com.google.code.findbugs:annotations:jar:2.0.1:compile
+[INFO] +- com.sparkjava:spark-core:jar:2.3:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.12:compile
+[INFO] |  +- org.slf4j:slf4j-simple:jar:1.7.12:compile
+[INFO] |  +- org.eclipse.jetty:jetty-server:jar:9.3.2.v20150730:compile
+[INFO] |  |  +- javax.servlet:javax.servlet-api:jar:3.1.0:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-http:jar:9.3.2.v20150730:compile
+[INFO] |  |  |  \- org.eclipse.jetty:jetty-util:jar:9.3.2.v20150730:compile
+[INFO] |  |  \- org.eclipse.jetty:jetty-io:jar:9.3.2.v20150730:compile
+[INFO] |  +- org.eclipse.jetty:jetty-webapp:jar:9.3.2.v20150730:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-xml:jar:9.3.2.v20150730:compile
+[INFO] |  |  \- org.eclipse.jetty:jetty-servlet:jar:9.3.2.v20150730:compile
+[INFO] |  |     \- org.eclipse.jetty:jetty-security:jar:9.3.2.v20150730:compile
+[INFO] |  +- org.eclipse.jetty.websocket:websocket-server:jar:9.3.2.v20150730:compile
+[INFO] |  |  +- org.eclipse.jetty.websocket:websocket-common:jar:9.3.2.v20150730:compile
+[INFO] |  |  \- org.eclipse.jetty.websocket:websocket-client:jar:9.3.2.v20150730:compile
+[INFO] |  \- org.eclipse.jetty.websocket:websocket-servlet:jar:9.3.2.v20150730:compile
+[INFO] |     \- org.eclipse.jetty.websocket:websocket-api:jar:9.3.2.v20150730:compile
+[INFO] +- org.apache.commons:commons-lang3:jar:3.4:compile
+[INFO] \- commons-io:commons-io:jar:2.4:compile
+    </textarea><br/>
+    <button id="do">Do</button><br/>
+    <div id="result">
+    </div>
+</div><!-- /.container -->
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+</body>
+</html>
