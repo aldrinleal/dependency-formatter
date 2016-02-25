@@ -1,75 +1,45 @@
 ///<reference path="../typings/browser.d.ts"/>
-
-class Dependency {
-    groupId:string;
-
-    artifactId:string;
-
-    packaging:string;
-
-    version:string;
-
-    scope:string;
-
-    constructor(groupId?:string, artifactId?:string, packaging?:string, version?:string, scope?:string) {
+var Dependency = (function () {
+    function Dependency(groupId, artifactId, packaging, version, scope) {
         this.groupId = groupId;
         this.artifactId = artifactId;
         this.packaging = packaging;
         this.version = version;
-
         if (scope) {
             this.scope = scope;
-        } else {
+        }
+        else {
             this.scope = 'compile';
         }
     }
-
-    asDependency():string {
-        var result = `<dependency>
-  <groupId>${this.groupId}</groupId>
-  <artifactId>${this.artifactId}</artifactId>
-  <version>${this.version}</version>
-`
-
+    Dependency.prototype.asDependency = function () {
+        var result = "<dependency>\n  <groupId>" + this.groupId + "</groupId>\n  <artifactId>" + this.artifactId + "</artifactId>\n  <version>" + this.version + "</version>\n";
         if ('jar' != this.packaging) {
-            result += `<packaging>${this.packaging}</packaging>`
+            result += "<packaging>" + this.packaging + "</packaging>";
         }
-
         if ('compile' !== this.scope) {
-            result += `<scope>${this.packaging}</scope>`
+            result += "<scope>" + this.packaging + "</scope>";
         }
-
-        result += `</dependency>
-`
-
+        result += "</dependency>\n";
         return result;
-    }
-}
-
+    };
+    return Dependency;
+}());
 $(function () {
-    $('#do').on('click',  (e: JQueryEventObject) => {
+    $('#do').on('click', function (e) {
         e.preventDefault();
-
         var t = $("#text").text();
-
-        var dependencies = t.match(/[^\s]+:[^\s]+:[^\s]+:[^\s]+:[^\s]+(:[^\s]+)?/g).map((x:string) => {
+        var dependencies = t.match(/[^\s]+:[^\s]+:[^\s]+:[^\s]+:[^\s]+(:[^\s]+)?/g).map(function (x) {
             //console.log('x: ', x);
-
             var elts = x.split(/:/);
-
             var d = new Dependency();
-
             d.constructor.apply(d, elts);
-
             return d;
-        }).map((d) => d.asDependency());
-
+        }).map(function (d) { return d.asDependency(); });
         console.log('dependencies: ', JSON.stringify(dependencies, null, 2));
-
         var htmlContent = dependencies.join("\n");
-
-        $("#result").append("<pre>")
+        $("#result").append("<pre>");
         $("#result pre").text(htmlContent);
         //.text(htmlContent);
-    })
+    });
 });
