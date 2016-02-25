@@ -16,6 +16,7 @@
     "gulp-copy": "0.0.2",
     "gulp-gh-pages": "^0.5.4",
     "gulp-typescript": "^2.12.0",
+    "gulp-webserver": "^0.9.1",
     "typescript": "^1.8.2"
   }
 }

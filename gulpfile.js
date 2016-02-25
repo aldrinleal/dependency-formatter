@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     copy = require('gulp-copy'),
     gh_publish = require('gulp-gh-pages'),
+    webserver = require('gulp-webserver'),
     typescript = require('gulp-typescript');
 
 gulp.task('clean', function () {
@@ -11,7 +12,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('scripts', function () {
-    return gulp.src('src/**/*.ts').pipe(typescript()).pipe(gulp.dest('public/js'));
+    gulp.src('src/**/*.ts').pipe(typescript()).pipe(gulp.dest('public/js'));
 });
 
 gulp.task('watch', function () {
@@ -26,4 +27,10 @@ gulp.task('dist', ['scripts'], function () {
 
 gulp.task('gh-publish', ['dist'], function () {
     gulp.src('dist/**/*').pipe(gh_publish());
+});
+
+gulp.task('serve', ['watch'], function () {
+    gulp.src('public').pipe(webserver({
+        livereload: true
+    }));
 });
