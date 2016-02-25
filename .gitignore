@@ -32,3 +32,4 @@ public/js/*.js
 dist
 
 .idea
+.publish

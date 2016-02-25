@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "gulp clean dist"
+    "clean": "gulp clean",
+    "test": "gulp default",
+    "prepublish": "gulp dist"
   },
   "author": "Aldrin Leal <aldrin@leal.eng.br>",
   "private": true,
